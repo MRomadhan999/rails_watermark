@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @user.nama %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @user.alamat %>
+</p>
+
+<p>
+  <strong>Handphone:</strong>
+  <%= @user.handphone %>
+</p>
+
+<p>
+  <strong>Photo Profile:</strong>
+  <%= @user.image %>
+  <br>
+  <%= image_tag @user.image_url(:thumb_profile).to_s %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
